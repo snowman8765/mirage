@@ -1,0 +1,413 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 16.0.7.0 for Windows">
+<title>
+      売上管理システム
+    </title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <script type="text/javascript" src="../lib/jquery/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="../lib/jquery-ui/css/dark-hive/jquery-ui-1.8.22.custom.css">
+    <script type="text/javascript" src="../lib/jquery-ui/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <link rel="stylesheet" href="../lib/DataTables/jquery.dataTables.css" type="text/css">
+    <script type="text/javascript" src="../lib/DataTables/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="../lib/jQuery.ptTimeSelect-0.7.3/src/jquery.ptTimeSelect.css" type="text/css">
+    <script type="text/javascript" src="../lib/jQuery.ptTimeSelect-0.7.3/src/jquery.ptTimeSelect.js"></script>
+    <script type="text/javascript" src="functions.php"></script>
+  </head>
+  <body style="background-color : black;">
+    <div style="width : 900px;height : 650px;top : 50px;left : 50px; position : absolute; z-index : 1; visibility : visible; background-image : url(../img/mainBg_4E.png);" id="Layer1" align="left">
+      <a href="../index.html"><img src="../img/home-button.png" border="0" width="30" height="30" alt="top" style="top:20px;left:10px;position:absolute;"></a>
+      <img src="../img/headerBg_4E_012.png" border="0" width="900" height="82" align="middle" alt="#########"><br>
+      <center>
+        <br>
+        <table>
+          <tbody valign="middle">
+            <tr>
+              <td width="430" align="left" valign="top">
+                <form action="controller.php" method="post">
+                  <font color="#CCCCCC" face="イワタ特太明朝体V3">伝票番号</font>
+                  <p>
+                    <input size="65" type="text" name="denpyou_bangou" id="denpyou_bangou">
+                  </p>
+                  <hr>
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">入店</font>
+                        </td>
+                        <td>
+                          <input size="10" type="text" name="nyuuten" id="nyuuten">
+                          <input type="hidden" name="nomihoudai" id="nomihoudai">
+                        </td>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">退店</font>
+                        </td>
+                        <td>
+                          <input size="10" type="text" name="taiten" id="taiten">
+                        </td>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">席番</font>
+                        </td>
+                        <td>
+                          <select name="sekiban" id="sekiban">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="AVIP">AVIP</option>
+                            <option value="BVIP">BVIP</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">人数</font>
+                        </td>
+                        <td>
+                          <input size="10" type="text" name="ninzuu" id="ninzuu">
+                        </td>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">CHG</font>
+                        </td>
+                        <td>
+                          <input size="10" type="text" name="chg" id="chg">
+                        </td>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">VIP</font>
+                        </td>
+                        <td>
+                          <input size="10" type="text" value="0" name="vip" id="vip">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td width="97"><font color="#CCCCCC" face="イワタ特太明朝体V3">パーティー</font></td>
+                        <td width="161"><input size="20" type="text" name="party" id="party"></td>
+                        <td width="87"><font color="#CCCCCC" face="イワタ特太明朝体V3">指名料込み</font></td>
+                        <td width="67"><input type="checkbox" name="simeiryou_komi" id="simeiryou_komi"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">指名1</font>
+                        </td>
+                        <td>
+                          <select name="simei1" class="simei" id="simei1">
+                            <option value="0">
+                              　
+                            </option>
+                            <option value="指名">
+                              指名
+                            </option>
+                            <option value="場内指名">
+                              場内指名
+                            </option>
+                            <option value="同伴">
+                              同伴
+                            </option>
+                            <option value="前日同伴">
+                              前日同伴
+                            </option>
+                            <option value="前々日同伴">
+                              前々日同伴
+                            </option>
+                          </select>
+                        </td>
+                        <td>
+                          <select name="simei1_name" class="simei_name" id="simei1_name">
+                            <option value="0">
+                              　　
+                            </option>
+                            <option>
+                              女の子①
+                            </option>
+                            <option>
+                              女の子②
+                            </option>
+                            <option>
+                              女の子③
+                            </option>
+                            <option>
+                              女の子④
+                            </option>
+                          </select>
+                        </td>
+                        <td>
+                          <input size="25" type="text" name="okyaku1" id="okyaku1">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">指名2</font>
+                        </td>
+                        <td>
+                          <select name="simei2" class="simei" id="simei2">
+                            <option value="0">
+                              　
+                            </option>
+                            <option value="指名">
+                              指名
+                            </option>
+                            <option value="場内指名">
+                              場内指名
+                            </option>
+                            <option value="同伴">
+                              同伴
+                            </option>
+                            <option value="前日同伴">
+                              前日同伴
+                            </option>
+                            <option value="前々日同伴">
+                              前々日同伴
+                            </option>
+                          </select>
+                        </td>
+                        <td>
+                          <select name="simei2_name" class="simei_name" id="simei2_name">
+                            <option value="0">
+                              　　
+                            </option>
+                            <option>
+                              女の子①
+                            </option>
+                            <option>
+                              女の子②
+                            </option>
+                            <option>
+                              女の子③
+                            </option>
+                            <option>
+                              女の子④
+                            </option>
+                          </select>
+                        </td>
+                        <td>
+                          <input size="25" type="text" name="okyaku2" id="okyaku2">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">指名3</font>
+                        </td>
+                        <td>
+                          <select name="simei3" class="simei" id="simei3">
+                            <option value="0">
+                              　
+                            </option>
+                            <option value="指名">
+                              指名
+                            </option>
+                            <option value="場内指名">
+                              場内指名
+                            </option>
+                            <option value="同伴">
+                              同伴
+                            </option>
+                            <option value="前日同伴">
+                              前日同伴
+                            </option>
+                            <option value="前々日同伴">
+                              前々日同伴
+                            </option>
+                          </select>
+                        </td>
+                        <td>
+                          <select name="simei3_name" class="simei_name" id="simei3_name">
+                            <option value="0">
+                              　　
+                            </option>
+                            <option>
+                              女の子①
+                            </option>
+                            <option>
+                              女の子②
+                            </option>
+                            <option>
+                              女の子③
+                            </option>
+                            <option>
+                              女の子④
+                            </option>
+                          </select>
+                        </td>
+                        <td>
+                          <input size="25" type="text" name="okyaku3" id="okyaku3">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">指名4</font>
+                        </td>
+                        <td>
+                          <select name="simei4" class="simei" id="simei4">
+                            <option value="0">
+                              　
+                            </option>
+                            <option value="指名">
+                              指名
+                            </option>
+                            <option value="場内指名">
+                              場内指名
+                            </option>
+                            <option value="同伴">
+                              同伴
+                            </option>
+                            <option value="前日同伴">
+                              前日同伴
+                            </option>
+                            <option value="前々日同伴">
+                              前々日同伴
+                            </option>
+                          </select>
+                        </td>
+                        <td>
+                          <select name="simei4_name" class="simei_name" id="simei4_name">
+                            <option value="0">
+                              　　
+                            </option>
+                            <option>
+                              女の子①
+                            </option>
+                            <option>
+                              女の子②
+                            </option>
+                            <option>
+                              女の子③
+                            </option>
+                            <option>
+                              女の子④
+                            </option>
+                          </select>
+                        </td>
+                        <td>
+                          <input size="25" type="text" name="okyaku4" id="okyaku4">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td width="20%">
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">オーダー</font>
+                        </td>
+                        <td width="20%">
+                          <input type="button" name="オーダー" id="order_input" value="入力">
+                        </td>
+                        <td width="20%">
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">オーダー計</font>
+                        </td>
+                        <td width="40%">
+                          <input size="20" type="text" name="order_kei" value="0" id="order_kei">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">小計</font>
+                        </td>
+                        <td>
+                          <input size="22" type="text" name="syoukei" value="0" id="syoukei">
+                        </td>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">割引</font>
+                        </td>
+                        <td>
+                          <input size="22" type="text" name="waribiki" value="0" id="waribiki">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <table border="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td colspan="3">
+                                  <font color="#CCCCCC" face="イワタ特太明朝体V3">支払方法</font>
+                                </td>
+                                <td>
+                                  <input type="radio" name="siharai" value="genkin" id="genkin" checked><font color="#CCCCCC" face="イワタ特太明朝体V3">現金　<input type="radio" name="siharai" value="card" id="card">カード　<input type="radio" name="siharai" value="urikake" id="urikake">売掛</font>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <font color="#CCCCCC" face="イワタ特太明朝体V3">請求金額</font>
+                  <p>
+                    <input size="65" type="text" name="uriage" value="0" id="uriage">
+                  </p>
+                  <hr>
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td align="right">
+                          <input type="submit" name="add" value="登録">　<input type="submit" name="update" value="更新">　<input type="submit" name="delete" value="削除">　<input type="reset" name="取消" value="取消">　<input type="submit" name="meisai" id="meisai" value="出力">　<input type="button" name="keisan" id="keisan" value="計算">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
+              </td>
+              <td width="430" valign="top">
+                <input type="text" name="hiduke" id="datepicker">
+                <table border="0" width="100%" id="dataTables">
+                  <thead>
+                    <tr>
+                      <td width="20%" bgcolor="#000000"><font color="#cccccc" face="イワタ特太明朝体V3" size="-1">伝票番号</font></td>
+                      <td width="20%" bgcolor="#000000"><font color="#cccccc" face="イワタ特太明朝体V3" size="-1">入店</font></td>
+                      <td width="20%" bgcolor="#000000"><font color="#cccccc" face="イワタ特太明朝体V3" size="-1">退店</font></td>
+                      <td width="20%" bgcolor="#000000"><font color="#cccccc" face="イワタ特太明朝体V3" size="-1">人数</font></td>
+                      <td  width="20%" bgcolor="#000000"><font color="#cccccc" face="イワタ特太明朝体V3" size="-1">請求金額</font></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td bgcolor="#cccccc"></td>
+                      <td bgcolor="#cccccc"></td>
+                      <td bgcolor="#cccccc"></td>
+                      <td bgcolor="#cccccc"></td>
+                      <td bgcolor="#cccccc"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </div>
+    <div id="disp"></div>
+  </body>
+</html>

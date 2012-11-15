@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="GENERATOR" content="JustSystems Homepage Builder Version 16.0.7.0 for Windows">
+    <title>
+      売上管理システム
+    </title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <script type="text/javascript" src="../lib/jquery/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="../lib/jquery-ui/css/dark-hive/jquery-ui-1.8.22.custom.css">
+    <script type="text/javascript" src="../lib/jquery-ui/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <link rel="stylesheet" href="../lib/DataTables/jquery.dataTables.css" type="text/css">
+    <script type="text/javascript" src="../lib/DataTables/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="../lib/jQuery.ptTimeSelect-0.7.3/src/jquery.ptTimeSelect.css" type="text/css">
+    <script type="text/javascript" src="../lib/jQuery.ptTimeSelect-0.7.3/src/jquery.ptTimeSelect.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+  </head>
+  <body style="background-color : black;">
+    <div style="width : 900px;height : 650px;top : 50px;left : 50px; position : absolute; z-index : 1; visibility : visible; background-image : url(../img/mainBg_4E.png);" id="Layer1" align="left">
+      <a href="../index.html"><img src="../img/home-button.png" border="0" width="30" height="30" alt="top" style="top:20px;left:10px;position:absolute;"></a>
+      <img src="../img/headerBg_4E_012.png" border="0" width="900" height="82" align="middle" alt="#########"><br>
+      <center>
+        <br>
+        <table>
+          <tbody valign="middle">
+            <tr>
+              <td width="430" align="left" valign="top">
+                <form action="controller.php" method="post">
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">ID</font>
+                          <p>
+                            <input size="29" type="text" name="id" id="id">
+                          </p>
+                          <hr>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">処理部門</font>
+                          <p>
+                            <input size="29" type="text" name="syori_bumon" id="syori_bumon">
+                          </p>
+                          <hr>
+                        </td>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">相手科目</font>
+                          <p>
+                            <input size="29" type="text" name="aite_kamoku" id="aite_kamoku">
+                          </p>
+                          <hr>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">領収書日付</font>
+                          <p>
+                            <input size="29" type="text" name="ryousyuusyo_hiduke" id="datepicker">
+                          </p>
+                          <hr>
+                        </td>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">支払先</font>
+                          <p>
+                            <input size="29" type="text" name="siharaisaki" id="siharaisaki">
+                          </p>
+                          <hr>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">用途/数量</font>
+                          <p>
+                            <input size="29" type="text" name="youto" id="youto">
+                          </p>
+                          <hr>
+                        </td>
+                        <td valign="top">
+                          <font color="#CCCCCC" face="イワタ特太明朝体V3">金額</font>
+                          <p>
+                            <input size="29" type="text" name="kingaku" id="kingaku">
+                          </p>
+                          <hr>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td align="right">
+                          <input type="submit" name="add" value="登録">　<input type="submit" name="update" value="更新">　<input type="submit" name="delete" value="削除">　<input type="reset" name="取消" value="取消">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
+              </td>
+              <td width="430" valign="top">
+                <table border="0" width="100%">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="text" name="hiduke2" id="datepicker2">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table border="0" width="100%" id="dataTables">
+                  <thead>
+                    <tr>
+                      <td width="10%" bgcolor="#000000">
+                        <font color="#CCCCCC" face="イワタ特太明朝体V3" size="-1">ID</font>
+                      </td>
+                      <td width="15%" bgcolor="#000000">
+                        <font color="#CCCCCC" face="イワタ特太明朝体V3" size="-1">部門</font>
+                      </td>
+                      <td width="15%" bgcolor="#000000">
+                        <font color="#CCCCCC" face="イワタ特太明朝体V3" size="-1">科目</font>
+                      </td>
+                      <td width="15%" bgcolor="#000000">
+                        <font color="#CCCCCC" face="イワタ特太明朝体V3" size="-1">日付</font>
+                      </td>
+                      <td width="15%" bgcolor="#000000">
+                        <font color="#CCCCCC" face="イワタ特太明朝体V3" size="-1">支払</font>
+                      </td>
+                      <td width="15%" bgcolor="#000000">
+                        <font color="#CCCCCC" face="イワタ特太明朝体V3" size="-1">数量</font>
+                      </td>
+                      <td width="15%" bgcolor="#000000">
+                        <font color="#CCCCCC" face="イワタ特太明朝体V3" size="-1">金額</font>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">1</font>
+                      </td>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">営業</font>
+                      </td>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">取引先</font>
+                      </td>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">2012/07/25</font>
+                      </td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">30</font>
+                      </td>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">350000</font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">2</font>
+                      </td>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">総務</font>
+                      </td>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">取引先</font>
+                      </td>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">2012/07/25</font>
+                      </td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">1</font>
+                      </td>
+                      <td bgcolor="#CCCCCC">
+                        <font size="-1">15000</font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                      <td bgcolor="#CCCCCC"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </div>
+  </body>
+</html>

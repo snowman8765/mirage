@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+#dataTables td {
+  font-size: smaller;
+}
+
+#dataTables thead td {
+  background-color: #000000;
+}

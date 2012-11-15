@@ -1,0 +1,779 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+  <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+  <meta name=ProgId content=Excel.Sheet>
+  <meta name=Generator content="Microsoft Excel 11">
+  <link rel=File-List href="syakou_taiken.files/filelist.xml">
+  <link rel=Edit-Time-Data href="syakou_taiken.files/editdata.mso">
+  <link rel=OLE-Object-Data href="syakou_taiken.files/oledata.mso">
+  <!--[if gte mso 9]>
+    <xml>
+      <o:DocumentProperties>
+        <o:Author>Tomo</o:Author>
+        <o:LastAuthor>Tomo</o:LastAuthor>
+        <o:LastPrinted>2012-07-20T11:05:30Z</o:LastPrinted>
+        <o:Created>2012-07-20T11:05:08Z</o:Created>
+        <o:LastSaved>2012-07-20T11:05:53Z</o:LastSaved>
+        <o:Version>11.5606</o:Version>
+      </o:DocumentProperties>
+    </xml>
+  <![endif]-->
+    <style>
+    <!--table {
+ mso-displayed-decimal-separator:"\."; mso-displayed-thousand-separator:"\,";}
+
+ @page {
+ margin:.39in .39in .39in .39in; mso-header-margin:0in; mso-footer-margin:0in; mso-page-orientation:landscape; mso-horizontal-page-align:center;}
+
+ tr {
+ mso-height-source:auto; mso-ruby-visibility:none;}
+
+ col {
+ mso-width-source:auto; mso-ruby-visibility:none;}
+
+ br {
+ mso-data-placement:same-cell;}
+
+ .style0 {
+ mso-number-format:General; text-align:general; vertical-align:middle; white-space:nowrap; mso-rotate:0; mso-background-source:auto; mso-pattern:auto; color:windowtext; font-size:11.0pt; font-weight:400; font-style:normal; text-decoration:none; font-family:"ＭＳ Ｐゴシック", monospace; mso-font-charset:128; border:none; mso-protection:locked visible; mso-style-name:標準; mso-style-id:0;}
+
+ td {
+ mso-style-parent:style0; padding-top:1px; padding-right:1px; padding-left:1px; mso-ignore:padding; color:windowtext; font-size:11.0pt; font-weight:400; font-style:normal; text-decoration:none; font-family:"ＭＳ Ｐゴシック", monospace; mso-font-charset:128; mso-number-format:General; text-align:general; vertical-align:middle; border:none; mso-background-source:auto; mso-pattern:auto; mso-protection:locked visible; white-space:nowrap; mso-rotate:0;}
+
+ .xl24 {
+ mso-style-parent:style0; font-size:6.0pt; text-align:left; vertical-align:bottom;}
+
+ .xl25 {
+ mso-style-parent:style0; font-size:12.0pt; text-align:center;}
+
+ .xl26 {
+ mso-style-parent:style0; font-size:12.0pt; text-align:center; border-top:none; border-right:.5pt solid windowtext; border-bottom:none; border-left:none;}
+
+ .xl27 {
+ mso-style-parent:style0; font-size:8.0pt; text-align:center; border-top:.5pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:.5pt solid windowtext; background:silver; mso-pattern:auto none;}
+
+ .xl28 {
+ mso-style-parent:style0; font-size:8.0pt; text-align:center; border-top:.5pt solid windowtext; border-right:.5pt solid windowtext; border-bottom:.5pt solid windowtext; border-left:none; background:silver; mso-pattern:auto none;}
+
+ .xl29 {
+ mso-style-parent:style0; font-size:6.0pt;}
+
+ .xl30 {
+ mso-style-parent:style0; font-size:8.0pt; text-align:right; vertical-align:bottom; border-top:none; border-right:none; border-bottom:.5pt solid windowtext; border-left:none;}
+
+ .xl31 {
+ mso-style-parent:style0; font-size:8.0pt; text-align:left; vertical-align:bottom; border-top:none; border-right:none; border-bottom:.5pt solid windowtext; border-left:none;}
+
+ .xl32 {
+ mso-style-parent:style0; font-size:6.0pt; border-top:.5pt solid windowtext; border-right:none; border-bottom:none; border-left:.5pt solid windowtext;}
+
+ .xl33 {
+ mso-style-parent:style0; font-size:6.0pt; border-top:.5pt solid windowtext; border-right:.5pt solid windowtext; border-bottom:none; border-left:none;}
+
+ .xl34 {
+ mso-style-parent:style0; font-size:6.0pt; text-align:left; vertical-align:top;}
+
+ .xl35 {
+ mso-style-parent:style0; font-size:6.0pt; border-top:none; border-right:none; border-bottom:.5pt solid windowtext; border-left:.5pt solid windowtext;}
+
+ .xl36 {
+ mso-style-parent:style0; font-size:6.0pt; border-top:none; border-right:.5pt solid windowtext; border-bottom:.5pt solid windowtext; border-left:none;}
+
+ .xl37 {
+ mso-style-parent:style0; font-size:6.0pt; text-align:left; vertical-align:top; border-top:none; border-right:none; border-bottom:1.0pt solid windowtext; border-left:none;}
+
+ .xl38 {
+ mso-style-parent:style0; font-size:6.0pt; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:none;}
+
+ .xl39 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:1.0pt solid windowtext; mso-diagonal-down:.5pt solid windowtext; background:silver; mso-pattern:auto none;}
+
+ .xl40 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:.5pt solid black; border-bottom:.5pt solid windowtext; border-left:none; mso-diagonal-down:.5pt solid windowtext; background:silver; mso-pattern:auto none;}
+
+ .xl41 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:.5pt solid black; background:silver; mso-pattern:auto none;}
+
+ .xl42 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:none; background:silver; mso-pattern:auto none;}
+
+ .xl43 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:2.0pt double windowtext; border-bottom:.5pt solid windowtext; border-left:none; background:silver; mso-pattern:auto none;}
+
+ .xl44 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:2.0pt double windowtext; background:silver; mso-pattern:auto none; white-space:normal;}
+
+ .xl45 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:.5pt solid black; border-bottom:.5pt solid windowtext; border-left:none; background:silver; mso-pattern:auto none; white-space:normal;}
+
+ .xl46 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:.5pt solid black; border-bottom:.5pt solid windowtext; border-left:none; background:silver; mso-pattern:auto none;}
+
+ .xl47 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:.5pt solid black; background:silver; mso-pattern:auto none; white-space:normal;}
+
+ .xl48 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:none; background:silver; mso-pattern:auto none; white-space:normal;}
+
+ .xl49 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:.5pt solid windowtext; border-bottom:.5pt solid windowtext; border-left:none; background:silver; mso-pattern:auto none; white-space:normal;}
+
+ .xl50 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:.5pt solid windowtext; background:silver; mso-pattern:auto none; white-space:normal;}
+
+ .xl51 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:.5pt solid windowtext; background:silver; mso-pattern:auto none;}
+
+ .xl52 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:.5pt solid windowtext; border-bottom:.5pt solid windowtext; border-left:none; background:silver; mso-pattern:auto none;}
+
+ .xl53 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:2.0pt double black; border-bottom:.5pt solid windowtext; border-left:none; background:silver; mso-pattern:auto none; white-space:normal;}
+
+ .xl54 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:2.0pt double black; background:silver; mso-pattern:auto none;}
+
+ .xl55 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:2.0pt double black; border-bottom:.5pt solid windowtext; border-left:none; background:silver; mso-pattern:auto none;}
+
+ .xl56 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:1.0pt solid windowtext; border-right:1.0pt solid black; border-bottom:.5pt solid windowtext; border-left:none; background:silver; mso-pattern:auto none;}
+
+ .xl57 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center;}
+
+ .xl58 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:1.0pt solid windowtext;}
+
+ .xl59 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:.5pt solid windowtext; border-bottom:.5pt solid windowtext; border-left:none;}
+
+ .xl60 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:.5pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:.5pt solid windowtext;}
+
+ .xl61 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:.5pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:none;}
+
+ .xl62 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:.5pt solid windowtext; border-right:2.0pt double windowtext; border-bottom:.5pt solid windowtext; border-left:none;}
+
+ .xl63 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:2.0pt double windowtext;}
+
+ .xl64 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:.5pt solid black; border-bottom:.5pt solid windowtext; border-left:none;}
+
+ .xl65 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:.5pt solid black;}
+
+ .xl66 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:none;}
+
+ .xl67 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:.5pt solid windowtext;}
+
+ .xl68 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:2.0pt double black; border-bottom:.5pt solid windowtext; border-left:none;}
+
+ .xl69 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:2.0pt double black;}
+
+ .xl70 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:.5pt solid black; mso-diagonal-down:.5pt solid black;}
+
+ .xl71 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:.5pt solid windowtext; border-left:none; mso-diagonal-down:.5pt solid black;}
+
+ .xl72 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:.5pt solid black; border-bottom:.5pt solid windowtext; border-left:none; mso-diagonal-down:.5pt solid black;}
+
+ .xl73 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:1.0pt solid black; border-bottom:.5pt solid windowtext; border-left:none;}
+
+ .xl74 {
+ mso-style-parent:style0; font-size:9.0pt;}
+
+ .xl75 {
+ mso-style-parent:style0; font-size:8.0pt; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:none;}
+
+ .xl76 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:1.0pt solid windowtext;}
+
+ .xl77 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:.5pt solid windowtext; border-right:.5pt solid black; border-bottom:1.0pt solid windowtext; border-left:none;}
+
+ .xl78 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:.5pt solid black;}
+
+ .xl79 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:none;}
+
+ .xl80 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:center; border-top:.5pt solid windowtext; border-right:2.0pt double windowtext; border-bottom:1.0pt solid windowtext; border-left:none;}
+
+ .xl81 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:2.0pt double windowtext;}
+
+ .xl82 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:.5pt solid black; border-bottom:1.0pt solid windowtext; border-left:none;}
+
+ .xl83 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:.5pt solid black;}
+
+ .xl84 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:none;}
+
+ .xl85 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:.5pt solid windowtext; border-bottom:1.0pt solid windowtext; border-left:none;}
+
+ .xl86 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:.5pt solid windowtext;}
+
+ .xl87 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:2.0pt double black; border-bottom:1.0pt solid windowtext; border-left:none;}
+
+ .xl88 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:2.0pt double black;}
+
+ .xl89 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:.5pt solid black; mso-diagonal-down:.5pt solid black;}
+
+ .xl90 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:none; border-bottom:1.0pt solid windowtext; border-left:none; mso-diagonal-down:.5pt solid black;}
+
+ .xl91 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:.5pt solid black; border-bottom:1.0pt solid windowtext; border-left:none; mso-diagonal-down:.5pt solid black;}
+
+ .xl92 {
+ mso-style-parent:style0; font-size:9.0pt; text-align:right; border-top:.5pt solid windowtext; border-right:1.0pt solid black; border-bottom:1.0pt solid windowtext; border-left:none;}
+
+ ruby {
+ ruby-align:left;}
+
+ rt {
+ color:windowtext; font-size:6.0pt; font-weight:400; font-style:normal; text-decoration:none; font-family:"ＭＳ Ｐゴシック", monospace; mso-font-charset:128; mso-char-type:katakana; display:none;
+ }
+
+ -->
+    </style>
+  <!--[if gte mso 9]>
+    <xml>
+      <x:ExcelWorkbook>
+        <x:ExcelWorksheets>
+          <x:ExcelWorksheet>
+            <x:Name>Sheet3 (4)</x:Name>
+            <x:WorksheetOptions>
+              <x:DefaultRowHeight>180</x:DefaultRowHeight>
+              <x:Print>
+              <x:ValidPrinterInfo/>
+                <x:PaperSizeIndex>9</x:PaperSizeIndex>
+                <x:HorizontalResolution>600</x:HorizontalResolution>
+                <x:VerticalResolution>600</x:VerticalResolution>
+              </x:Print>
+            <x:Selected/>
+              <x:Panes>
+                <x:Pane>
+                  <x:Number>3</x:Number>
+                  <x:ActiveRow>10</x:ActiveRow>
+                  <x:ActiveCol>12</x:ActiveCol>
+                  <x:RangeSelection>$M$11:$O$11</x:RangeSelection>
+                </x:Pane>
+              </x:Panes>
+              <x:ProtectContents>False</x:ProtectContents>
+              <x:ProtectObjects>False</x:ProtectObjects>
+              <x:ProtectScenarios>False</x:ProtectScenarios>
+            </x:WorksheetOptions>
+          </x:ExcelWorksheet>
+        </x:ExcelWorksheets>
+        <x:WindowHeight>13845</x:WindowHeight>
+        <x:WindowWidth>24675</x:WindowWidth>
+        <x:WindowTopX>480</x:WindowTopX>
+        <x:WindowTopY>90</x:WindowTopY>
+        <x:ProtectStructure>False</x:ProtectStructure>
+        <x:ProtectWindows>False</x:ProtectWindows>
+      </x:ExcelWorkbook>
+      <x:ExcelName>
+        <x:Name>Print_Area</x:Name>
+        <x:SheetIndex>1</x:SheetIndex>
+        <x:Formula>='Sheet3 (4)'!$A$1:$AQ$28</x:Formula>
+      </x:ExcelName>
+    </xml>
+  <![endif]-->
+  </head>
+  <body link=blue vlink=purple class=xl29>
+    <table x:str border=0 cellpadding=0 cellspacing=0 width=1118 style='border-collapse: collapse;table-layout:fixed;width:860pt'>
+    <col class=xl29 width=26 span=43 style='mso-width-source:userset;mso-width-alt: 832;width:20pt'>
+      <tr height=18 style='mso-height-source:userset;height:14.1pt'>
+        <td colspan=12 rowspan=2 height=36 class=xl24 width=312 style='height:28.2pt; width:240pt'>
+          <a name="Print_Area"></a>
+        </td>
+        <td colspan=21 class=xl25 width=546 style='width:420pt'>
+          <ruby>社交
+            <span style='display:none'>
+              <rt>シャコウ</rt>
+            </span>
+          </ruby>
+          <ruby>報酬
+            <span style='display:none'>
+              <rt>ホウシュウ</rt>
+            </span>
+          </ruby>
+          <ruby>明細票
+            <span style='display:none'>
+              <rt>メイサイヒョウ</rt>
+            </span>
+          </ruby>（
+          <ruby>体験
+            <span style='display:none'>
+              <rt>タイケン</rt>
+            </span>
+          </ruby>
+          <ruby>入店
+            <span style='display:none'>
+              <rt>ニュウテン</rt>
+            </span>
+          </ruby>）
+        </td>
+        <td colspan=4 rowspan=2 class=xl25 width=104 style='border-right:.5pt solid black; width:80pt'></td>
+        <td colspan=2 class=xl27 width=52 style='border-right:.5pt solid black; border-left:none;width:40pt'>
+          <ruby>担当
+            <span style='display:none'>
+              <rt>タントウ</rt>
+            </span>
+          </ruby>
+          <ruby>印
+            <span style='display:none'>
+              <rt>イン</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=2 class=xl27 width=52 style='border-right:.5pt solid black; border-left:none;width:40pt'>
+          <ruby>総務
+            <span style='display:none'>
+              <rt>ソウム</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=2 class=xl27 width=52 style='border-right:.5pt solid black; border-left:none;width:40pt'>
+          <ruby>承認
+            <span style='display:none'>
+              <rt>ショウニン</rt>
+            </span>
+          </ruby>
+        </td>
+      </tr>
+      <tr height=18 style='mso-height-source:userset;height:14.1pt'>
+        <td colspan=10 height=18 class=xl30 style='height:14.1pt'>
+          <ruby>支給日
+            <span style='display:none'>
+              <rt>シキュウビ</rt>
+            </span>
+          </ruby>：
+        <tag:year />
+          <ruby>年
+            <span style='display:none'>
+              <rt>トシ</rt>
+            </span>
+          </ruby>
+        <tag:month />
+          <ruby>月
+            <span style='display:none'>
+              <rt>ツキ</rt>
+            </span>
+          </ruby>
+        <tag:day />
+          <ruby>日
+            <span style='display:none'>
+              <rt>ヒ</rt>
+            </span>
+          </ruby>(
+        <tag:youbi />)
+        </td>
+        <td colspan=11 class=xl31>　　　　店舗：
+        <tag:tenpo />
+        </td>
+        <td colspan=2 rowspan=2 class=xl32 style='border-right:.5pt solid black; border-bottom:.5pt solid black'>　</td>
+        <td colspan=2 rowspan=2 class=xl32 style='border-right:.5pt solid black; border-bottom:.5pt solid black'>　</td>
+        <td colspan=2 rowspan=2 class=xl32 style='border-right:.5pt solid black; border-bottom:.5pt solid black'>　</td>
+      </tr>
+      <tr height=36 style='mso-height-source:userset;height:28.2pt'>
+        <td colspan=37 rowspan=2 height=36 class=xl34 style='border-bottom:1.0pt solid black; height:28.2pt'></td>
+      </tr>
+      <tr height=18 style='mso-height-source:userset;height:14.1pt'>
+        <td colspan=6 height=18 class=xl38 style='height:14.1pt'>　</td>
+      </tr>
+      <tr class=xl57 height=37 style='mso-height-source:userset;height:27.95pt'>
+        <td colspan=2 height=37 class=xl39 style='border-right:.5pt solid black; height:27.95pt'>　</td>
+        <td colspan=5 class=xl41 style='border-right:2.0pt double black;border-left: none'>
+          <ruby>名前
+            <span style='display:none'>
+              <rt>ナマエ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=2 class=xl44 width=52 style='border-right:.5pt solid black; border-left:none;width:40pt'>
+          <ruby>勤務
+            <span style='display:none'>
+              <rt>キンム</rt>
+            </span>
+          </ruby>
+        <br>
+          <ruby>日数
+            <span style='display:none'>
+              <rt>ニッスウ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl41 style='border-right:.5pt solid black;border-left: none'>
+          <ruby>基本給
+            <span style='display:none'>
+              <rt>キホンキュウ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl47 width=78 style='border-right:.5pt solid black; border-left:none;width:60pt'>
+          <ruby>時間外
+            <span style='display:none'>
+              <rt>ジカンガイ</rt>
+            </span>
+          </ruby>
+        <br>
+          <ruby>手当
+            <span style='display:none'>
+              <rt>テアテ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl50 width=78 style='border-right:.5pt solid black; border-left:none;width:60pt'>
+          <ruby>減給
+            <span style='display:none'>
+              <rt>ゲンキュウ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl51 style='border-right:.5pt solid black;border-left: none'>
+          <ruby>損益
+            <span style='display:none'>
+              <rt>ソンエキ</rt>
+            </span>
+          </ruby>
+          <ruby>金
+            <span style='display:none'>
+              <rt>キン</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=5 class=xl50 width=130 style='border-right:2.0pt double black; border-left:none;width:100pt'>
+          <ruby>合計
+            <span style='display:none'>
+              <rt>ゴウケイ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl54 style='border-right:.5pt solid black;border-left: none'>
+          <ruby>源泉
+            <span style='display:none'>
+              <rt>ゲンセン</rt>
+            </span>
+          </ruby>
+          <ruby>徴収
+            <span style='display:none'>
+              <rt>チョウシュウ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl41 style='border-right:.5pt solid black;border-left: none'>
+          <ruby>厚生費
+            <span style='display:none'>
+              <rt>コウセイヒ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl41 style='border-right:.5pt solid black;border-left: none'>
+          <ruby>雑収入
+            <span style='display:none'>
+              <rt>ザツシュウニュウ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl41 style='border-right:2.0pt double black;border-left: none'>
+          <ruby>前払
+            <span style='display:none'>
+              <rt>マエバラ</rt>
+            </span>
+          </ruby>い
+          <ruby>金
+            <span style='display:none'>
+              <rt>キン</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=5 class=xl54 style='border-right:1.0pt solid black;border-left: none'>
+          <ruby>現金
+            <span style='display:none'>
+              <rt>ゲンキン</rt>
+            </span>
+          </ruby>
+          <ruby>支給額
+            <span style='display:none'>
+              <rt>シキュウガク</rt>
+            </span>
+          </ruby>
+        </td>
+      </tr>
+      <loop:cast>
+        <tr class=xl74 height=20 style='mso-height-source:userset;height:15.0pt'>
+          <td colspan=2 height=20 class=xl58 style='border-right:.5pt solid black; height:15.0pt' x:num>
+          <tag:cast[].number />
+          </td>
+          <td colspan=5 class=xl60 style='border-right:2.0pt double black;border-left: none'>
+          <tag:cast[].cast_tai />
+          </td>
+          <td colspan=2 class=xl63 style='border-right:.5pt solid black;border-left: none'>
+          <tag:cast[].kinmu_tai />
+          </td>
+          <td colspan=3 class=xl65 style='border-right:.5pt solid black;border-left: none'>
+          <tag:cast[].kihonkyu_tai />
+          </td>
+          <td colspan=3 class=xl65 style='border-right:.5pt solid black;border-left: none'>
+          <tag:cast[].teate_tai />
+          </td>
+          <td colspan=3 class=xl65 style='border-right:.5pt solid black;border-left: none'>
+          <tag:cast[].gen_tai />
+          </td>
+          <td colspan=3 class=xl67 style='border-right:.5pt solid black;border-left: none'>
+          <tag:cast[].soneki_tai />
+          </td>
+          <td colspan=5 class=xl67 style='border-right:2.0pt double black;border-left: none'>
+          <tag:cast[].goukei_tai />
+          </td>
+          <td colspan=3 class=xl69 style='border-right:.5pt solid black;border-left: none'>
+          <tag:cast[].gensen_tai />
+          </td>
+          <td colspan=3 class=xl65 style='border-right:.5pt solid black;border-left: none'>
+          <tag:cast[].kousei_tai />
+          </td>
+          <td colspan=3 class=xl70 style='border-right:.5pt solid black;border-left: none'>　</td>
+          <td colspan=3 class=xl65 style='border-right:2.0pt double black;border-left: none'>
+          <tag:cast[].maebarai_tai />
+          </td>
+          <td colspan=5 class=xl69 style='border-right:1.0pt solid black;border-left: none'>
+          <tag:cast[].sikyuu_tai />
+          </td>
+        </tr>
+      </loop:cast>
+      <tr height=7 style='mso-height-source:userset;height:5.25pt'>
+        <td colspan=43 height=7 class=xl75 style='height:5.25pt'>　</td>
+      </tr>
+      <tr class=xl57 height=37 style='mso-height-source:userset;height:27.95pt'>
+        <td colspan=2 height=37 class=xl39 style='border-right:.5pt solid black; height:27.95pt'>　</td>
+        <td colspan=5 class=xl41 style='border-right:2.0pt double black;border-left: none'>
+          <ruby>人数
+            <span style='display:none'>
+              <rt>ニンズウ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=2 class=xl44 width=52 style='border-right:.5pt solid black; border-left:none;width:40pt'>
+          <ruby>勤務
+            <span style='display:none'>
+              <rt>キンム</rt>
+            </span>
+          </ruby>
+        <br>
+          <ruby>日数
+            <span style='display:none'>
+              <rt>ニッスウ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl41 style='border-right:.5pt solid black;border-left: none'>
+          <ruby>基本給
+            <span style='display:none'>
+              <rt>キホンキュウ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl47 width=78 style='border-right:.5pt solid black; border-left:none;width:60pt'>
+          <ruby>時間外
+            <span style='display:none'>
+              <rt>ジカンガイ</rt>
+            </span>
+          </ruby>
+        <br>
+          <ruby>手当
+            <span style='display:none'>
+              <rt>テアテ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl50 width=78 style='border-right:.5pt solid black; border-left:none;width:60pt'>
+          <ruby>減給
+            <span style='display:none'>
+              <rt>ゲンキュウ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl51 style='border-right:.5pt solid black;border-left: none'>
+          <ruby>損益
+            <span style='display:none'>
+              <rt>ソンエキ</rt>
+            </span>
+          </ruby>
+          <ruby>金
+            <span style='display:none'>
+              <rt>キン</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=5 class=xl50 width=130 style='border-right:2.0pt double black; border-left:none;width:100pt'>
+          <ruby>合計
+            <span style='display:none'>
+              <rt>ゴウケイ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl54 style='border-right:.5pt solid black;border-left: none'>
+          <ruby>源泉
+            <span style='display:none'>
+              <rt>ゲンセン</rt>
+            </span>
+          </ruby>
+          <ruby>徴収
+            <span style='display:none'>
+              <rt>チョウシュウ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl41 style='border-right:.5pt solid black;border-left: none'>
+          <ruby>厚生費
+            <span style='display:none'>
+              <rt>コウセイヒ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl41 style='border-right:.5pt solid black;border-left: none'>
+          <ruby>雑収入
+            <span style='display:none'>
+              <rt>ザツシュウニュウ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=3 class=xl41 style='border-right:2.0pt double black;border-left: none'>
+          <ruby>前払
+            <span style='display:none'>
+              <rt>マエバラ</rt>
+            </span>
+          </ruby>い
+          <ruby>金
+            <span style='display:none'>
+              <rt>キン</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=5 class=xl54 style='border-right:1.0pt solid black;border-left: none'>
+          <ruby>現金
+            <span style='display:none'>
+              <rt>ゲンキン</rt>
+            </span>
+          </ruby>
+          <ruby>支給額
+            <span style='display:none'>
+              <rt>シキュウガク</rt>
+            </span>
+          </ruby>
+        </td>
+      </tr>
+      <tr class=xl74 height=37 style='mso-height-source:userset;height:27.95pt'>
+        <td colspan=2 height=37 class=xl76 style='border-right:.5pt solid black; height:27.95pt'>
+          <ruby>合計
+            <span style='display:none'>
+              <rt>ゴウケイ</rt>
+            </span>
+          </ruby>
+        </td>
+        <td colspan=5 class=xl78 style='border-right:2.0pt double black;border-left: none'>
+        <tag:goukei.cast_tai_kei />
+        </td>
+        <td colspan=2 class=xl81 style='border-right:.5pt solid black;border-left: none'>
+        <tag:goukei.kinmu_tai_kei />
+        </td>
+        <td colspan=3 class=xl83 style='border-right:.5pt solid black;border-left: none'>
+        <tag:goukei.kihonkyu_tai_kei />
+        </td>
+        <td colspan=3 class=xl83 style='border-right:.5pt solid black;border-left: none'>
+        <tag:goukei.teate_tai_kei />
+        </td>
+        <td colspan=3 class=xl83 style='border-right:.5pt solid black;border-left: none'>
+        <tag:goukei.gen_tai_kei />
+        </td>
+        <td colspan=3 class=xl86 style='border-right:.5pt solid black;border-left: none'>
+        <tag:goukei.soneki_tai_kei />
+        </td>
+        <td colspan=5 class=xl86 style='border-right:2.0pt double black;border-left: none'>
+        <tag:goukei.goukei_tai_kei />
+        </td>
+        <td colspan=3 class=xl88 style='border-right:.5pt solid black;border-left: none'>
+        <tag:goukei.gensen_tai_kei />
+        </td>
+        <td colspan=3 class=xl83 style='border-right:.5pt solid black;border-left: none'>
+        <tag:goukei.kousei_tai_kei />
+        </td>
+        <td colspan=3 class=xl89 style='border-right:.5pt solid black;border-left: none'>　</td>
+        <td colspan=3 class=xl83 style='border-right:2.0pt double black;border-left: none'>
+        <tag:goukei.maebarai_tai_kei />
+        </td>
+        <td colspan=5 class=xl88 style='border-right:1.0pt solid black;border-left: none'>
+        <tag:sikyuu_tai_kei />
+        </td>
+      </tr>
+    <![if supportMisalignedColumns]>
+      <tr height=0 style='display:none'>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+        <td width=26 style='width:20pt'></td>
+      </tr>
+    <![endif]>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>売上管理システム</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <script type="text/javascript" src="../lib/jquery/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="../lib/jquery-ui/css/dark-hive/jquery-ui-1.8.22.custom.css">
+    <script type="text/javascript" src="../lib/jquery-ui/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <link rel="stylesheet" href="../lib/DataTables/jquery.dataTables.css" type="text/css">
+    <script type="text/javascript" src="../lib/DataTables/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="../lib/jQuery.ptTimeSelect-0.7.3/src/jquery.ptTimeSelect.css" type="text/css">
+    <script type="text/javascript" src="../lib/jQuery.ptTimeSelect-0.7.3/src/jquery.ptTimeSelect.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+  </head>
+  <body style="background-color : black;">
+    <div style="width : 900px;height : 650px;top : 50px;left : 50px;
+      position : absolute;
+      z-index : 1;
+      visibility : visible;
+      background-image : url(../img/mainBg_4E.png);
+    " id="Layer1" align="left">
+      <a href="../index.html"><img src="../img/home-button.png" border="0" width="30" height="30" alt="top" style="top:20px;left:10px;position:absolute;"></a>
+      <img src="../img/headerBg_4E_012.png" border="0" width="900" height="82" align="middle"><br>
+      <center><br>
+        <table>
+          <tbody valign="middle">
+            <tr>
+              <td width="430" align="left" valign="top">
+                <form action="pdf.php" method="post">
+                  <font color="#cccccc" face="イワタ特太明朝体V3">日付</font>
+                  <input size="65" type="text" name="hiduke" id="datepicker">
+                  <hr>
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td align="right">
+                          <input type="submit" name="pdf" value="PDF">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </div>
+  </body>
+</html>
